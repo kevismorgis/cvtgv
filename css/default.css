@@ -1,0 +1,333 @@
+body {
+	overflow-x: hidden !important;
+	color: white;
+	background: black;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 30vh;
+}
+
+body:before, body:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background-image: url(https://s9.limitedrun.com/images/1380171/caveborder.png);
+	background-repeat: repeat-y;
+	width: 10vw;
+	background-size: 10vw;
+	background-position: top center;
+}
+
+body:after {
+	right: 0;
+	transform: rotateY(180deg);
+}
+
+img {
+	max-width: 100%;
+}
+
+.center-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+}
+
+#loadscreen {
+	z-index: 99;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	height: 100%;
+	transition: all 0.5s ease-out; 
+	opacity: 0;
+	background: black;
+	pointer-events: none;
+}
+
+#loadscreen .loaderel {
+	animation: cavejitter 5s infinite cubic-bezier(.89,-0.58,.13,1.42);
+	animation-fill-mode: both;
+	animation-play-state: paused;
+	position: absolute;
+}
+
+#loadscreen .loaderel, #loadscreen #loaderbg {
+	max-width: 500px;
+	width: 90vw;
+}
+
+.loading #loadscreen {
+	opacity: 1;
+	pointer-events: initial;
+}
+
+.loading #loadscreen .loaderel {
+	animation-play-state: running;
+}
+
+#loadscreen .loaderel:nth-of-type(1) {
+	animation-delay: 0.2s;
+}
+
+#loadscreen .loaderel:nth-of-type(2) {
+	animation-delay: 0.4s;
+}
+
+#loadscreen .loaderel:nth-of-type(3) {
+	animation-delay: 0.6s;
+}
+
+#loadscreen .loaderel:nth-of-type(4) {
+	animation-delay: 0.8s;
+}
+
+#loadscreen .loaderel:nth-of-type(5) {
+	animation-delay: 1s;
+}
+
+#loadscreen .loaderel:nth-of-type(6) {
+	animation-delay: 1.2s;
+}
+
+#loadscreen .loaderel:nth-of-type(7) {
+	animation-delay: 1.4s;
+}
+
+#loadscreen .loaderel:nth-of-type(8) {
+	animation-delay: 1.6s;
+}
+
+/* ANIMATIONS */
+@keyframes cavejitter {
+	0% { 
+		transform: translateY(0px);
+	}
+	
+	25% {   
+		transform: translateY(20px);
+	}
+	
+	50% {
+		transform: translateY(-20px);
+	}
+	
+	100% { 
+		transform: translateY(0px);
+	}
+}
+
+/* CONTENT */
+header {
+	padding: 0 12vw 5vh;
+}
+
+header img {
+	display: block;
+	margin: auto;
+}
+
+.branch {
+	max-width: 100%;
+	z-index: -1;
+	margin-bottom: 5vh;
+}
+
+h1 {
+	font-size: calc(1rem + 3vw);
+	line-height: calc(1rem + 5vw);
+	text-align: center;
+	font-weight: 700;
+	text-transform: lowercase;
+}
+
+.logo {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.screen {
+	display: block;
+}
+
+#dates {
+	position: relative;
+	min-height: 100vh;
+	margin-top: -10vh;
+	padding: 5vh 12vw;
+	overflow: hidden;
+}
+
+#dates section {
+	max-width: 1200px;
+	margin: auto;
+}
+
+#dates:before {
+	left: 0;
+}
+
+section ul {
+	margin: 5vw 0;
+}
+
+section li {
+	margin-top: calc(10px + 5vh);
+	border-left: 1vw white solid;
+	padding: 20px;
+}
+
+li:nth-child(3n+1), li:nth-child(3n+1) .charity a, li:nth-child(3n+1) a {
+	border-color: #c47a2a;
+}
+
+li:nth-child(3n+2), li:nth-child(3n+2) .charity a, li:nth-child(3n+2) a {
+	border-color: #d95626;
+}
+
+li:nth-child(3n+3), li:nth-child(3n+3) .charity a, li:nth-child(3n+3) a {
+	border-color: #adad36;
+}
+
+li:nth-child(3n+1) a {
+	color: #c47a2a;
+}
+
+li:nth-child(3n+2) a {
+	color: #d95626;
+}
+
+li:nth-child(3n+3) a {
+	color: #adad36;
+}
+
+li span {
+	transition: all 1s ease-in-out;
+}
+
+.date, .loc {
+	font-size: calc(1rem + 1vw);
+	font-weight: 500;
+	text-transform: lowercase;
+	display: block;
+}
+
+.charity {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	font-weight: 700;
+	font-size: calc(1rem + 1vw);
+}
+
+.charity a {
+	border-bottom: 0.5vw solid white;
+	transition: all 1s ease-in-out;
+}
+
+footer {
+	position: absolute;
+	bottom: 10vh;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 70vw;
+	text-align: center;
+	z-index: 2;
+}
+
+footer > a {
+	display: inline-block;
+	margin: auto;
+	padding: 10px;
+	border-bottom: 0.5vw solid #a91c20;
+	color: #a91c20;
+	transition: all 1s ease-in-out;
+	font-weight: 700;
+	font-size: calc(1rem + 0.5vw);
+}
+
+footer > a:hover {
+	letter-spacing: 3px;
+}
+
+footer ul li {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+
+footer .socials li a {
+	font-size: calc(1rem + 0.5vw);
+	border-bottom-width: 0.5vw;
+	border-bottom-style: solid;
+	padding: 5px;
+	
+}
+
+/* SCREEN SPECIFIC ANIM */
+@media only screen and (min-width: 600px) {
+	li:hover .charity a {
+		letter-spacing: 3px;
+	}
+}
+
+/* GRAPHICS */
+.bee {
+	position: absolute;
+	top: 0;
+	right: 0;
+	max-width: 50vw;
+}
+
+.fox, .bear {
+	position: absolute;
+	bottom: 0;
+	left: 10vw;
+	max-width: 20vw;
+	max-height: 30vh;
+}
+
+.bear {
+	left: initial;
+	right: 7vw;
+}
+
+.bottom-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	height: 40vh;
+	width: 100%;
+	background-image: url(https://s9.limitedrun.com/images/1380488/bottomborder.png);
+	background-repeat: repeat-x;
+	background-size: 350px;
+	background-position: bottom center;
+}
+
+@media only screen and (max-width: 700px) {
+	.bottom-border {
+		z-index: -1;
+	}
+	
+	.fox {
+		left: 2vw;
+	}
+	
+	.bear {
+		right: 0;
+	}
+}
