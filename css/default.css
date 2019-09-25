@@ -208,6 +208,13 @@ section li:after {
 	margin: auto;
 }
 
+@media only screen and (max-width: 700px) {
+	section li {
+		flex: 100%;
+		width: 100%;
+	}
+}
+
 li:nth-child(3n+1), li:nth-child(3n+1) .charity a, li:nth-child(3n+1) a, li:nth-child(3n+1) .details, li:nth-child(3n+1):after {
 	border-color: #c47a2a;
 }
