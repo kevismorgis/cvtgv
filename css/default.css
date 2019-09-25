@@ -180,24 +180,43 @@ h1 {
 }
 
 section ul {
-	margin: 5vw 0;
+	margin: 2.5vw 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 section li {
-	margin-top: calc(10px + 5vh);
-	border-left: 1vw white solid;
-	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: calc(10px + 3.5vh);
+	padding: calc(1vh + 20px) 20px 20px;
+	text-align: center;
+	width: 100%;
 }
 
-li:nth-child(3n+1), li:nth-child(3n+1) .charity a, li:nth-child(3n+1) a, li:nth-child(3n+1) .details {
+section li:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 70%;
+	border-top: 1vh white solid;
+	margin: auto;
+}
+
+li:nth-child(3n+1), li:nth-child(3n+1) .charity a, li:nth-child(3n+1) a, li:nth-child(3n+1) .details, li:nth-child(3n+1):after {
 	border-color: #c47a2a;
 }
 
-li:nth-child(3n+2), li:nth-child(3n+2) .charity a, li:nth-child(3n+2) a, li:nth-child(3n+2) .details {
+li:nth-child(3n+2), li:nth-child(3n+2) .charity a, li:nth-child(3n+2) a, li:nth-child(3n+2) .details, li:nth-child(3n+2):after {
 	border-color: #d95626;
 }
 
-li:nth-child(3n+3), li:nth-child(3n+3) .charity a, li:nth-child(3n+3) a, li:nth-child(3n+3) .details {
+li:nth-child(3n+3), li:nth-child(3n+3) .charity a, li:nth-child(3n+3) a, li:nth-child(3n+3) .details, li:nth-child(3n+3):after {
 	border-color: #adad36;
 }
 
@@ -227,11 +246,11 @@ li span {
 .date {
 	order: -1;
 	font-weight: 600;
+	margin-bottom: 10px;
 }
 
 .charity {
-	padding-bottom: 10px;
-	margin-bottom: 10px;
+	padding-bottom: calc(10px + 0.5vw);
 	display: inline-block;
 	font-weight: 700;
 	font-size: calc(1rem + 1vw);
@@ -244,7 +263,7 @@ li span {
 
 .details {
 	display: inline-block;
-	margin-top: 10px;
+	margin: 10px auto 0;
 	padding: 10px 5px 0;
 	font-size: calc(1rem + 0.25vw);
 	border-top: 0.5vw dotted white;
@@ -296,7 +315,7 @@ footer .socials li a {
 /* SCREEN SPECIFIC ANIM */
 @media only screen and (min-width: 600px) {
 	li:hover .charity a {
-		filter: invert(1);
+		letter-spacing: 3px;
 	}
 }
 
