@@ -261,6 +261,7 @@ li span {
 	display: inline-block;
 	font-weight: 700;
 	font-size: calc(1rem + 0.5vw);
+	line-height: calc(3rem + 0.5vw);
 }
 
 .charity a {
@@ -277,7 +278,11 @@ li span {
 	border-right: 0.5vw solid white;
 	width: 100%;
 	max-width: 500px;
-	
+}
+
+.details a {
+	font-weight: 800;
+	letter-spacing: 1px;
 }
 
 footer {
