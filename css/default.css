@@ -266,8 +266,8 @@ li span {
 	margin: 10px auto 0;
 	padding: 10px 5px 0;
 	font-size: calc(1rem + 0.25vw);
-	border-left: 0.5vw dotted white;
-	border-right: 0.5vw dotted white;
+	border-left: 0.5vw solid white;
+	border-right: 0.5vw solid white;
 	width: 100%;
 	max-width: 500px;
 	
