@@ -280,6 +280,13 @@ li span {
 	max-width: 500px;
 }
 
+.details:after {
+	content: "You can drop off requested materials directly at the venue.";
+	margin-top: 10px;
+	display: block;
+	font-size: 0.7em;
+}
+
 .details a {
 	font-weight: 800;
 	letter-spacing: 1px;
