@@ -143,12 +143,20 @@ header img {
 	margin-bottom: 5vh;
 }
 
-h1 {
-	font-size: calc(1rem + 3vw);
-	line-height: calc(1rem + 5vw);
-	text-align: center;
+h1, h2 {
 	font-weight: 700;
 	text-transform: lowercase;
+}
+
+h1 {
+	text-align: center;
+	font-size: calc(1rem + 3vw);
+	line-height: calc(1rem + 5vw);
+}
+
+h2 {
+	font-size: calc(1rem + 1vw);
+	line-height: calc(1rem + 2vw);
 }
 
 .logo {
@@ -162,7 +170,7 @@ h1 {
 	display: block;
 }
 
-#dates {
+#dates, #faq {
 	position: relative;
 	min-height: 100vh;
 	margin-top: -10vh;
@@ -170,12 +178,12 @@ h1 {
 	overflow: hidden;
 }
 
-#dates section {
+#dates section, #faq section {
 	max-width: 1200px;
 	margin: auto;
 }
 
-#dates:before {
+#dates:before, #faq:before {
 	left: 0;
 }
 
@@ -227,15 +235,15 @@ li:nth-child(3n+3), li:nth-child(3n+3) .charity a, li:nth-child(3n+3) a, li:nth-
 	border-color: #adad36;
 }
 
-li:nth-child(3n+1) a, li:nth-child(3n+1) .details a {
+li:nth-child(3n+1) a, li:nth-child(3n+1) .details a, h2:nth-of-type(3n+1) {
 	color: #c47a2a;
 }
 
-li:nth-child(3n+2) a, li:nth-child(3n+2) .details a {
+li:nth-child(3n+2) a, li:nth-child(3n+2) .details a, h2:nth-of-type(3n+2) {
 	color: #d95626;
 }
 
-li:nth-child(3n+3) a, li:nth-child(3n+3) .details a {
+li:nth-child(3n+3) a, li:nth-child(3n+3) .details a, h2:nth-of-type(3n+3) {
 	color: #adad36;
 }
 
