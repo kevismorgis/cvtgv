@@ -279,7 +279,7 @@ li span {
 
 .details {
 	display: inline-block;
-	margin: 10px auto 0;
+	margin: auto auto 0;
 	padding: 10px 5px 0;
 	font-size: calc(1rem + 0.25vw);
 	border-left: 0.5vw solid white;
